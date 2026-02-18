@@ -1,9 +1,15 @@
 package ports
 
+import (
+	"github.com/BreakDown-CS/api-ecommerce/internal/domain"
+)
+
 type StaffServices interface {
-	SearchStaffList() ([]int, error)
+	CreateStaff(domain.RequestStaffInsert) (int, error)
+	SearchStaffList(domain.RequestStaffList) ([]int, error)
 }
 
 type StaffRepositories interface {
+	ChackStaffInsert(string, *string) (bool, error)
 	GetStaffList() ([]int, error)
 }

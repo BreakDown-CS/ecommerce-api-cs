@@ -8,5 +8,6 @@ import (
 func RegisterStaffRoutes(app *fiber.App, staffHandler *handler.StaffHandler) {
 	staff := app.Group("/api/staff")
 
+	staff.Post("/createStaff", staffHandler.CreateStaff)
 	staff.Post("/getStaffList", staffHandler.GetStaffList)
 }
