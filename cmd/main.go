@@ -48,7 +48,7 @@ func main() {
 
 	port := os.Getenv("APP_PORT")
 	if port == "" {
-		port = "4010"
+		port = "8080"
 	}
 	serverAddress := fmt.Sprintf("0.0.0.0:%s", port)
 
