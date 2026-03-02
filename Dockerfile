@@ -1,7 +1,7 @@
 # =========================================================
 # 🏗  Stage 1: Build Stage
 # =========================================================
-FROM golang:1.19 AS build-stage
+FROM golang:1.24 AS build-stage
 
 WORKDIR /app
 
