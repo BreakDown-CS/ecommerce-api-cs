@@ -15,7 +15,10 @@ import (
 	"github.com/joho/godotenv"
 )
 
+var version = "dev"
+
 func main() {
+	log.Println("App version:", version)
 
 	err := godotenv.Load()
 	if err != nil {
